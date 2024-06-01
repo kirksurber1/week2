@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Book App</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        function downloadStory(storyId) {
+            var content = document.getElementById(storyId).textContent
+            var text = new Blob([content], {type: 'text/plain'})
+            var link = document.createElement('a')
+            link.href = URL.createObjectURL(text)
+            link.download = storyId + ".txt"
+            link.click()
+        }
+    </script>
+</head>
+<body>
+    <div class="hero">
+        <h1>E-Book Reader and Downloader</h1>
+        <h4>Select Your Next Book! </h4>
+    </div>
+    <div class="cardArea">
+        <a href="#story1" >
+            <div class="card" style="background-image: url('./images/spaceship1.jpg'); background-size: contain; background-repeat: no-repeat; ">
+                <h2>The Odyssey</h2>
+                <h4>Jane Doe</h4>
+                <p id="story1" hidden>In the vast expanse of the cosmos, aboard the sleek starship Odyssey, Captain Mia Patel led her intrepid crew on a daring mission to explore the uncharted reaches of the Andromeda Galaxy. Their destination: a mysterious anomaly detected by deep-space probes, hinting at the possibility of a wormhole—a gateway to distant realms. As they neared the anomaly, strange disturbances rippled through the fabric of space, warping reality itself.
+
+                    With a surge of energy, the Odyssey was engulfed in a blinding vortex, hurtling through the unknown. Inside the tempest, time and space twisted, creating surreal landscapes that danced before their eyes. Hours stretched into eternity as they journeyed through the cosmic whirlpool, unsure of what awaited them on the other side. Yet, fueled by courage and curiosity, they pressed on, ready to embrace the wonders—and dangers—of the vast universe beyond.</p>
+                <div class="buttonArea">
+                    <a href="./audio/story1.mp3">
+                        <button>Listen</button>
+                    </a>
+                    <button onclick="downloadStory('story1')">Download text file</button>
+                </div>
+            </div>
+        </a>
+        <a href="#story2" >
+            <div class="card" style="background-image: url('./images/spaceship2.jpg'); background-size: contain; background-repeat: no-repeat; ">
+                <h2>The Aurora</h2>
+                <h4>John Doe</h4>
+                <p id="story2" hidden>In the distant future, the starship Aurora embarked on a mission to terraform a barren planet on the edge of the Milky Way. As they navigated the cosmos, they encountered a phenomenon known as "stellar whispers," enigmatic signals emanating from a cluster of stars. Intrigued, they followed the whispers into the heart of a cosmic storm, where reality itself seemed to unravel. Within the chaos, they discovered a gateway to a parallel dimension, offering glimpses of alternate realities and the tantalizing promise of new beginnings.                <div class="buttonArea">
+                    <a href="./audio/story2.mp3">
+                        <button>Listen</button>
+                    </a>
+                    <button onclick="downloadStory('story2')">Download text file</button>
+                </div>
+            </div>
+        </a>
+        <a href="#story3" >
+            <div class="card" style="background-image: url('./images/spaceship3.jpg'); background-size: contain; background-repeat: no-repeat; ">
+                <h2>The Horizon</h2>
+                <h4>Chuck Smith</h4>
+                <p id="story3" hidden>Captain Alex Chen and her crew aboard the starship Horizon embarked on humanity's first voyage beyond the bounds of the solar system. Their destination: a distant exoplanet teeming with the potential for life. Yet, as they traversed the void, they stumbled upon a rift in spacetime, a celestial anomaly that defied comprehension. Through the anomaly, they glimpsed echoes of ancient civilizations, long lost to the annals of time, hinting at the cosmic tapestry of existence and the boundless mysteries awaiting humanity among the stars.                <div class="buttonArea">
+                    <a href="./audio/story3.mp3">
+                        <button>Listen</button>
+                    </a>
+                    <button onclick="downloadStory('story3')">Download text file</button>
+                </div>
+            </div>
+        </a>
+        <a href="#story4" >
+            <div class="card" style="background-image: url('./images/spaceship4.jpg'); background-size: contain; background-repeat: no-repeat; ">
+                <h2>The Eclipse</h2>
+                <h4>George L.</h4>
+                <p id="story4" hidden>The starship Eclipse soared through the inky blackness of space, its mission to uncover the secrets of a long-forgotten alien civilization. Guided by ancient star maps, they journeyed to the heart of a nebula, where whispers of a cosmic enigma beckoned. Within the nebula's swirling depths, they stumbled upon a celestial garden, a sanctuary of life amidst the void. As they explored the garden's wonders, they unraveled the mysteries of the cosmos, forging a connection with the universe itself and the infinite possibilities that lay beyond.                <div class="buttonArea">
+                    <a href="./audio/story4.mp3">
+                        <button>Listen</button>
+                    </a>
+                    <button onclick="downloadStory('story4')">Download text file</button>
+                </div>
+            </div>
+        </a>
+        <a href="#story5" >
+            <div class="card" style="background-image: url('./images/YoungChewy4.jpg'); background-size: contain; background-repeat: no-repeat; ">
+                <h2>Young Chewy</h2>
+                <h4>George L.</h4>
+                <p id="story5" hidden>Deep within the towering forests of Kashyyyk, a young Wookiee named Chewbacca spent his early years learning the ways of his people. From his father, Attichitcuk, Chewbacca inherited a deep reverence for the ancient traditions of the Wookiee tribe, honing his skills in hunting and survival amidst the lush canopy. As he roamed the dense jungles with his loyal friend, Hanharr, Chewbacca discovered a kinship with the natural world, forging bonds with the creatures that called Kashyyyk home.</p>
+                <div class="buttonArea">
+                    <a href="./audio/story5.mp3">
+                        <button>Listen</button>
+                    </a>
+                    <button onclick="downloadStory('story5')">Download text file</button>
+                </div>
+            </div>
+        </a>
+        <a href="#story6" >
+            <div class="card" style="background-image: url('./images/YoungChewy2.jpg'); background-size: contain; background-repeat: no-repeat; ">
+                <h2>Chewy and the Empire</h2>
+                <h4>George L.</h4>
+                <p id="story6" hidden>But Chewbacca's idyllic upbringing was shattered by the encroaching shadow of the Galactic Empire, which sought to exploit Kashyyyk's resources and enslave its inhabitants. Forced into servitude, Chewbacca witnessed the brutality of Imperial rule firsthand, fueling his desire for freedom and justice. Alongside his mentor, Tarfful, Chewbacca joined the growing resistance movement, using his formidable strength and cunning to outmaneuver the Empire's forces and defend his homeland from tyranny. Despite the hardships he endured, Chewbacca emerged as a symbol of hope for the Wookiee people, inspiring others to rise up against oppression and fight for their right to live free.</p>
+                <div class="buttonArea">
+                    <a href="./audio/story6.mp3">
+                        <button>Listen</button>
+                    </a>
+                    
+                    <button onclick="downloadStory('story6')">Download text file</button>
+                </div>
+            </div>
+        </a>
+        <a href="#story7" >
+            <div class="card" style="background-image: url('./images/YoungChewy3.jpg'); background-size: contain; background-repeat: no-repeat; ">
+                <h2>Chewy and the Clouds</h2>
+                <h4>George L.</h4>
+                <p id="story7" hidden>As a young Wookiee, Chewbacca excelled in the art of piloting, honing his skills aboard his family's skyship among the clouds of Kashyyyk. Under the guidance of his uncle, Auzituck, Chewbacca navigated the treacherous winds and stormy skies with ease, earning a reputation as one of the finest pilots on the planet. Yet, his dreams of exploring the stars were tempered by the responsibilities of his clan and the looming threat of Imperial occupation, which cast a shadow over his aspirations.</p>
+                <div class="buttonArea">
+                    <a href="./audio/story7.mp3">
+                        <button>Listen</button>
+                    </a>
+                    <button onclick="downloadStory('story7')">Download text file</button>
+                </div>
+            </div>
+        </a>
+        <a href="#story8" >
+            <div class="card" style="background-image: url('./images/YoungChewy1.jpg'); background-size: contain; background-repeat: no-repeat; ">
+                <h2>Chewy Fights Back</h2>
+                <h4>George L.</h4>
+                <p id="story8" hidden>Determined to protect his loved ones and preserve the spirit of his people, Chewbacca embarked on a journey of self-discovery, seeking out allies among the stars to aid in the fight against the Empire. Along the way, he forged a deep bond with a young smuggler named Han Solo, whose roguish charm and quick wit complemented Chewbacca's steadfast loyalty and unwavering courage. Together, they embarked on daring adventures across the galaxy, facing danger at every turn and cementing their place in history as legendary heroes of the Rebellion.</p>
+                <div class="buttonArea">
+                    <a href="./audio/story8.mp3">
+                        <button>Listen</button>
+                    </a>
+                    <button onclick="downloadStory('story8')">Download text file</button>
+                </div>
+            </div>
+        </a>
+      
+    </div>
+    
+</body>
+</html>
